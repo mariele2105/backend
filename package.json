@@ -1,6 +1,6 @@
 {
-  "name": "ed",
-  "version": "1.0.2",
+  "name": "front",
+  "version": "1.0.1",
   "description": "Este repositorio foi criado com o objetico de armazenar e organizar os\r codigos desenvolvidos durante as aulas e atividades praticas da\r disciplina",
   "main": "index.js",
   "scripts": {
