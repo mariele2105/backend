@@ -19,3 +19,5 @@ praticas. Essas praticas visam fortalecer os conceitos aprendidos em sala,
 proporcionando oportunidades para aplicaçao e exercicios das 
 habilidades adquiridas.
 
+comentario de desenvolvimento
+
