@@ -16,12 +16,14 @@ git add nome_arquivo
 
 ``` shell 
 git commit -m "comentario"
+```
 
 4. atualizar repositorio
 
 ``` shell 
 git pull origin main
 ``` 
+
 5. Enviar para o repositorio
 ``` shell
 git push origin main
