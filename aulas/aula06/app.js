@@ -1,7 +1,8 @@
 const express = require('express');
-const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+
+const tarefas = [];
 
 const indexRouter = require('./routes/index');
 
@@ -16,4 +17,25 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 
-module.exports = app;
+app.get('/tarefas', (req, res) => {
+    res.json(tarefas);
+})
+
+app.post('/tarefas', (req, res) => {
+    const novaTarefa = { 
+        ...req.body, id: tarefas.length + 1
+    };
+    tarefas.push(novaTarefa);
+    res.status(201).json(novaTarefa);
+});
+
+app.get("/tarefas/:id", (req, res) => {
+    const { id } = req.params; 
+    const tarefaEncontrada = tarefas.find((item) => 
+        item.id === parseInt(id));
+    if (tarefaEncontrada)
+      return res.json(tarefaEncontrada);
+    res.status(404).json({msg: "Tarefa não encontrada"});
+    });
+
+module.exports = app; 
